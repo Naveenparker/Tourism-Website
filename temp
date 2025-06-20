@@ -1,0 +1,1239 @@
+         <!-- Enhanced AI Travel Assistant Chatbot -->
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        <div class="chatbot-header-left">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Travel Assistant" class="chatbot-logo">
+            <h3 data-i18n="chatbot.title">Travel Assistant</h3>
+        </div>
+        <div class="chatbot-header-right">
+            <div class="language-selector">
+                <select id="chatbotLanguage">
+                    <option value="en">English</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ja">日本語</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+            <div class="chatbot-close" id="chatbotClose">&times;</div>
+        </div>
+    </div>
+    <div class="chatbot-tabs">
+        <button class="chatbot-tab active" data-tab="chat">Chat</button>
+        <button class="chatbot-tab" data-tab="packages">Packages</button>
+        <button class="chatbot-tab" data-tab="destinations">Destinations</button>
+        <button class="chatbot-tab" data-tab="deals">Deals</button>
+    </div>
+    <div class="chatbot-content">
+        <div class="chatbot-tab-content active" data-tab-content="chat">
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Bot" class="chatbot-avatar">
+                    <div class="message-content">
+                        <p data-i18n="chatbot.welcome">Hello! I'm your travel assistant. Where would you like to go today?</p>
+                        <div class="quick-questions">
+                            <button class="quick-question" data-i18n="chatbot.quick.tamilnadu">Tamil Nadu</button>
+                            <button class="quick-question" data-i18n="chatbot.quick.india">India</button>
+                            <button class="quick-question" data-i18n="chatbot.quick.international">International</button>
+                            <button class="quick-question" data-i18n="chatbot.quick.couple">Couple Package</button>
+                            <button class="quick-question" data-i18n="chatbot.quick.family">Family Package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Ask about travel..." data-i18n-placeholder="chatbot.placeholder">
+                <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
+                <button id="chatbotMic"><i class="fas fa-microphone"></i></button>
+                <button id="chatbotAttach"><i class="fas fa-paperclip"></i></button>
+            </div>
+        </div>
+        
+        <div class="chatbot-tab-content" data-tab-content="packages">
+            <div class="package-categories">
+                <button class="package-category active" data-category="all">All Packages</button>
+                <button class="package-category" data-category="tamilnadu">Tamil Nadu</button>
+                <button class="package-category" data-category="india">India</button>
+                <button class="package-category" data-category="international">International</button>
+                <button class="package-category" data-category="couple">Couple</button>
+                <button class="package-category" data-category="family">Family</button>
+                <button class="package-category" data-category="adventure">Adventure</button>
+                <button class="package-category" data-category="luxury">Luxury</button>
+            </div>
+            <div class="package-list">
+                <div class="package-card" data-categories="tamilnadu couple luxury">
+                    <div class="package-image" style="background-image: url('https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                        <span class="package-badge">Romantic</span>
+                    </div>
+                    <div class="package-details">
+                        <h4>Tamil Nadu Romantic Getaway</h4>
+                        <p class="package-duration">7 Days / 6 Nights</p>
+                        <div class="package-highlights">
+                            <span><i class="fas fa-bed"></i> Luxury Resorts</span>
+                            <span><i class="fas fa-utensils"></i> Private Dinners</span>
+                            <span><i class="fas fa-spa"></i> Couple Spa</span>
+                        </div>
+                        <div class="package-price">
+                            <span>From ₹24,999</span>
+                            <button class="package-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="package-card" data-categories="tamilnadu family">
+                    <div class="package-image" style="background-image: url('https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                        <span class="package-badge">Family Fun</span>
+                    </div>
+                    <div class="package-details">
+                        <h4>Tamil Nadu Family Explorer</h4>
+                        <p class="package-duration">5 Days / 4 Nights</p>
+                        <div class="package-highlights">
+                            <span><i class="fas fa-child"></i> Kids Activities</span>
+                            <span><i class="fas fa-swimming-pool"></i> Resort Stay</span>
+                            <span><i class="fas fa-bus"></i> Comfortable Transport</span>
+                        </div>
+                        <div class="package-price">
+                            <span>From ₹18,499</span>
+                            <button class="package-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="package-card" data-categories="india adventure">
+                    <div class="package-image" style="background-image: url('https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                        <span class="package-badge">Adventure</span>
+                    </div>
+                    <div class="package-details">
+                        <h4>Himalayan Trekking Adventure</h4>
+                        <p class="package-duration">10 Days / 9 Nights</p>
+                        <div class="package-highlights">
+                            <span><i class="fas fa-hiking"></i> Guided Treks</span>
+                            <span><i class="fas fa-mountain"></i> Himalayan Views</span>
+                            <span><i class="fas fa-campground"></i> Camping</span>
+                        </div>
+                        <div class="package-price">
+                            <span>From ₹32,999</span>
+                            <button class="package-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="package-card" data-categories="international luxury">
+                    <div class="package-image" style="background-image: url('https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')">
+                        <span class="package-badge">Luxury</span>
+                    </div>
+                    <div class="package-details">
+                        <h4>European Luxury Tour</h4>
+                        <p class="package-duration">14 Days / 13 Nights</p>
+                        <div class="package-highlights">
+                            <span><i class="fas fa-hotel"></i> 5-Star Hotels</span>
+                            <span><i class="fas fa-wine-glass-alt"></i> Wine Tasting</span>
+                            <span><i class="fas fa-plane"></i> Business Class Flights</span>
+                        </div>
+                        <div class="package-price">
+                            <span>From ₹2,49,999</span>
+                            <button class="package-view">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-tab-content" data-tab-content="destinations">
+            <div class="destination-search">
+                <input type="text" placeholder="Search destinations..." data-i18n-placeholder="chatbot.search.destinations">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="destination-categories">
+                <h4 data-i18n="chatbot.destination.tamilnadu">Tamil Nadu Highlights</h4>
+                <div class="destination-grid">
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chennai">
+                        <div class="destination-info">
+                            <h5>Chennai</h5>
+                            <p>Beaches & Culture</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Madurai">
+                        <div class="destination-info">
+                            <h5>Madurai</h5>
+                            <p>Temples & Heritage</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ooty">
+                        <div class="destination-info">
+                            <h5>Ooty</h5>
+                            <p>Hill Station</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kodaikanal">
+                        <div class="destination-info">
+                            <h5>Kodaikanal</h5>
+                            <p>Misty Mountains</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 data-i18n="chatbot.destination.india">India Highlights</h4>
+                <div class="destination-grid">
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Goa">
+                        <div class="destination-info">
+                            <h5>Goa</h5>
+                            <p>Beaches & Nightlife</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kerala">
+                        <div class="destination-info">
+                            <h5>Kerala</h5>
+                            <p>Backwaters & Nature</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Rajasthan">
+                        <div class="destination-info">
+                            <h5>Rajasthan</h5>
+                            <p>Palaces & Forts</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Himalayas">
+                        <div class="destination-info">
+                            <h5>Himalayas</h5>
+                            <p>Mountains & Adventure</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 data-i18n="chatbot.destination.international">International Highlights</h4>
+                <div class="destination-grid">
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bali">
+                        <div class="destination-info">
+                            <h5>Bali</h5>
+                            <p>Island Paradise</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Switzerland">
+                        <div class="destination-info">
+                            <h5>Switzerland</h5>
+                            <p>Alpine Beauty</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Japan">
+                        <div class="destination-info">
+                            <h5>Japan</h5>
+                            <p>Culture & Technology</p>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Dubai">
+                        <div class="destination-info">
+                            <h5>Dubai</h5>
+                            <p>Modern Marvels</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-tab-content" data-tab-content="deals">
+            <div class="deals-container">
+                <div class="deal-card featured">
+                    <div class="deal-badge">Featured</div>
+                    <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Special Deal">
+                    <div class="deal-content">
+                        <h4>Summer Special: Tamil Nadu</h4>
+                        <p class="deal-description">Enjoy 7 days exploring Tamil Nadu's best destinations with 30% off!</p>
+                        <div class="deal-price">
+                            <span class="original-price">₹28,999</span>
+                            <span class="discounted-price">₹20,299</span>
+                            <span class="deal-savings">Save 30%</span>
+                        </div>
+                        <div class="deal-expiry">
+                            <i class="fas fa-clock"></i> <span>Offer ends in 5 days</span>
+                        </div>
+                        <button class="deal-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">Last Minute</div>
+                    <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Last Minute Deal">
+                    <div class="deal-content">
+                        <h4>Weekend Getaway: Pondicherry</h4>
+                        <p class="deal-description">2 nights in luxury beach resort with breakfast included</p>
+                        <div class="deal-price">
+                            <span class="original-price">₹12,999</span>
+                            <span class="discounted-price">₹8,999</span>
+                            <span class="deal-savings">Save ₹4,000</span>
+                        </div>
+                        <div class="deal-expiry">
+                            <i class="fas fa-clock"></i> <span>Limited availability</span>
+                        </div>
+                        <button class="deal-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">Family</div>
+                    <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Family Deal">
+                    <div class="deal-content">
+                        <h4>Family Adventure: Kodaikanal</h4>
+                        <p class="deal-description">4 days of fun activities for the whole family</p>
+                        <div class="deal-price">
+                            <span class="original-price">₹35,999</span>
+                            <span class="discounted-price">₹28,799</span>
+                            <span class="deal-savings">Save 20%</span>
+                        </div>
+                        <div class="deal-expiry">
+                            <i class="fas fa-clock"></i> <span>Valid until Aug 30</span>
+                        </div>
+                        <button class="deal-book">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">Honeymoon</div>
+                    <img src="https://images.unsplash.com/photo-1582974115351-70f54a569d7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Honeymoon Deal">
+                    <div class="deal-content">
+                        <h4>Romantic Escape: Maldives</h4>
+                        <p class="deal-description">5 nights in overwater villa with private pool</p>
+                        <div class="deal-price">
+                            <span class="original-price">₹1,49,999</span>
+                            <span class="discounted-price">₹1,19,999</span>
+                            <span class="deal-savings">Save ₹30,000</span>
+                        </div>
+                        <div class="deal-expiry">
+                            <i class="fas fa-clock"></i> <span>Limited time offer</span>
+                        </div>
+                        <button class="deal-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="chatbot-toggle" id="chatbotToggle">
+    <i class="fas fa-plane"></i>
+    <span class="chatbot-notification">1</span>
+</div>
+
+<style>
+    /* Enhanced Chatbot Styles */
+    .chatbot-container {
+        position: fixed;
+        bottom: 8rem;
+        right: 3rem;
+        width: 380px;
+        height: 600px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1001;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .chatbot-container.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .chatbot-header {
+        background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+        color: white;
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .chatbot-header-left {
+        display: flex;
+        align-items: center;
+    }
+    
+    .chatbot-logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    .chatbot-header h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    
+    .chatbot-header-right {
+        display: flex;
+        align-items: center;
+    }
+    
+    .language-selector {
+        margin-right: 15px;
+    }
+    
+    .language-selector select {
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        border: none;
+        background: rgba(255,255,255,0.2);
+        color: white;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+    
+    .language-selector select option {
+        color: #333;
+    }
+    
+    .chatbot-close {
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        line-height: 1;
+    }
+    
+    .chatbot-close:hover {
+        transform: rotate(90deg);
+    }
+    
+    .chatbot-tabs {
+        display: flex;
+        background: #f5f7fa;
+        border-bottom: 1px solid #e1e5eb;
+    }
+    
+    .chatbot-tab {
+        flex: 1;
+        padding: 0.8rem;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #666;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .chatbot-tab.active {
+        color: #2980b9;
+    }
+    
+    .chatbot-tab.active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #2980b9;
+    }
+    
+    .chatbot-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .chatbot-tab-content {
+        display: none;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+    
+    .chatbot-tab-content.active {
+        display: block;
+    }
+    
+    /* Chat Tab Styles */
+    .chatbot-messages {
+        flex-grow: 1;
+        padding: 1rem;
+        overflow-y: auto;
+        background: #f5f7fa;
+    }
+    
+    .chatbot-message {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    
+    .bot-message {
+        justify-content: flex-start;
+    }
+    
+    .user-message {
+        justify-content: flex-end;
+    }
+    
+    .chatbot-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-right: 0.8rem;
+        align-self: flex-end;
+    }
+    
+    .user-message .chatbot-avatar {
+        order: 1;
+        margin-right: 0;
+        margin-left: 0.8rem;
+    }
+    
+    .message-content {
+        max-width: 75%;
+    }
+    
+    .message-content p {
+        background: white;
+        padding: 0.8rem 1rem;
+        border-radius: 12px;
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .bot-message .message-content p {
+        border-top-left-radius: 0;
+        background: #e3f2fd;
+    }
+    
+    .user-message .message-content p {
+        border-top-right-radius: 0;
+        background: #2980b9;
+        color: white;
+    }
+    
+    .quick-questions {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.8rem;
+        gap: 0.5rem;
+    }
+    
+    .quick-question {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+    
+    .quick-question:hover {
+        background: #2980b9;
+        color: white;
+        border-color: #2980b9;
+    }
+    
+    .chatbot-input {
+        display: flex;
+        padding: 0.8rem;
+        background: white;
+        border-top: 1px solid #eee;
+    }
+    
+    .chatbot-input input {
+        flex-grow: 1;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        font-size: 0.9rem;
+    }
+    
+    .chatbot-input button {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        background: #2980b9;
+        color: white;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .chatbot-input button:hover {
+        background: #2c3e50;
+    }
+    
+    /* Packages Tab Styles */
+    .package-categories {
+        display: flex;
+        overflow-x: auto;
+        padding: 0.8rem;
+        gap: 0.5rem;
+        background: #f5f7fa;
+        border-bottom: 1px solid #e1e5eb;
+    }
+    
+    .package-category {
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        background: white;
+        font-size: 0.8rem;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+    
+    .package-category.active {
+        background: #2980b9;
+        color: white;
+        border-color: #2980b9;
+    }
+    
+    .package-list {
+        padding: 0.8rem;
+        overflow-y: auto;
+    }
+    
+    .package-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .package-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .package-image {
+        height: 120px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .package-badge {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        background: rgba(41, 128, 185, 0.9);
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+    
+    .package-details {
+        padding: 0.8rem;
+    }
+    
+    .package-details h4 {
+        margin: 0 0 0.3rem 0;
+        font-size: 1rem;
+        color: #333;
+    }
+    
+    .package-duration {
+        font-size: 0.8rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+    
+    .package-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .package-highlights span {
+        font-size: 0.7rem;
+        color: #555;
+        display: flex;
+        align-items: center;
+    }
+    
+    .package-highlights i {
+        margin-right: 0.3rem;
+        color: #2980b9;
+        font-size: 0.8rem;
+    }
+    
+    .package-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .package-price span {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #2980b9;
+    }
+    
+    .package-view {
+        padding: 0.3rem 0.8rem;
+        border-radius: 4px;
+        border: none;
+        background: #2980b9;
+        color: white;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .package-view:hover {
+        background: #2c3e50;
+    }
+    
+    /* Destinations Tab Styles */
+    .destination-search {
+        display: flex;
+        padding: 0.8rem;
+        background: #f5f7fa;
+        border-bottom: 1px solid #e1e5eb;
+    }
+    
+    .destination-search input {
+        flex-grow: 1;
+        padding: 0.6rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        font-size: 0.9rem;
+    }
+    
+    .destination-search button {
+        background: none;
+        border: none;
+        margin-left: 0.5rem;
+        color: #2980b9;
+        cursor: pointer;
+    }
+    
+    .destination-categories {
+        padding: 0.8rem;
+    }
+    
+    .destination-categories h4 {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #333;
+    }
+    
+    .destination-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .destination-card {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .destination-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .destination-card img {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+    }
+    
+    .destination-info {
+        padding: 0.6rem;
+        background: white;
+    }
+    
+    .destination-info h5 {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #333;
+    }
+    
+    .destination-info p {
+        margin: 0.2rem 0 0 0;
+        font-size: 0.7rem;
+        color: #666;
+    }
+    
+    /* Deals Tab Styles */
+    .deals-container {
+        padding: 0.8rem;
+    }
+    
+    .deal-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    
+    .deal-card.featured {
+        border: 2px solid #f39c12;
+    }
+    
+    .deal-badge {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        background: #e74c3c;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        z-index: 1;
+    }
+    
+    .deal-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+    
+    .deal-content {
+        padding: 0.8rem;
+        background: white;
+    }
+    
+    .deal-content h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+        color: #333;
+    }
+    
+    .deal-description {
+        font-size: 0.8rem;
+        color: #666;
+        margin-bottom: 0.8rem;
+    }
+    
+    .deal-price {
+        margin-bottom: 0.8rem;
+    }
+    
+    .original-price {
+        font-size: 0.9rem;
+        color: #999;
+        text-decoration: line-through;
+        margin-right: 0.5rem;
+    }
+    
+    .discounted-price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #e74c3c;
+    }
+    
+    .deal-savings {
+        font-size: 0.7rem;
+        background: #fde8e8;
+        color: #e74c3c;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        margin-left: 0.5rem;
+    }
+    
+    .deal-expiry {
+        font-size: 0.7rem;
+        color: #666;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+    
+    .deal-expiry i {
+        margin-right: 0.3rem;
+    }
+    
+    .deal-book {
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        background: #2980b9;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .deal-book:hover {
+        background: #2c3e50;
+    }
+    
+    /* Chatbot Toggle Button */
+    .chatbot-toggle {
+        position: fixed;
+        bottom: 3rem;
+        Left: 3rem;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+    
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+    }
+    
+    .chatbot-toggle.active {
+        transform: rotate(360deg);
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    }
+    
+    .chatbot-notification {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #e74c3c;
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .chatbot-container {
+            width: 90%;
+            right: 5%;
+            height: 70vh;
+            bottom: 8rem;
+        }
+        
+        .destination-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .chatbot-toggle {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            bottom: 2rem;
+            right: 2rem;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize chatbot
+    const chatbotContainer = document.getElementById('chatbotContainer');
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSend = document.getElementById('chatbotSend');
+    const chatbotMic = document.getElementById('chatbotMic');
+    const chatbotTabs = document.querySelectorAll('.chatbot-tab');
+    const chatbotTabContents = document.querySelectorAll('.chatbot-tab-content');
+    const packageCategories = document.querySelectorAll('.package-category');
+    const packageCards = document.querySelectorAll('.package-card');
+    
+    // Sample travel-related responses with more details
+    const botResponses = {
+        'greeting': {
+            en: "Hello! I'm your travel assistant. How can I help you plan your perfect trip today?",
+            ta: "வணக்கம்! நான் உங்கள் பயண உதவியாளர். உங்கள் சிறந்த பயணத்தைத் திட்டமிட என்னால் எப்படி உதவ முடியும்?",
+            hi: "नमस्ते! मैं आपका यात्रा सहायक हूँ। आज मैं आपकी सही यात्रा की योजना बनाने में कैसे मदद कर सकता हूँ?"
+        },
+        'packages': {
+            en: "We offer several packages: Tamil Nadu Special, India Explorer, and International Getaways. We also have special packages for couples, families, and adventure seekers!",
+            ta: "நாங்கள் பல தொகுப்புகளை வழங்குகிறோம்: தமிழ்நாடு சிறப்பு, இந்தியா எக்ஸ்ப்ளோரர் மற்றும் சர்வதேச கேட்வேக்கள். ஜோடிகள், குடும்பங்கள் மற்றும் சாகச தேடுபவர்களுக்கான சிறப்பு தொகுப்புகளும் எங்களிடம் உள்ளன!",
+            hi: "हम कई पैकेज प्रदान करते हैं: तमिलनाडु विशेष, भारत एक्सप्लोरर और अंतर्राष्ट्रीय गेटवे। हमारे पास जोड़ों, परिवारों और साहसिक यात्रियों के लिए विशेष पैकेज भी हैं!"
+        },
+        'tamilnadu': {
+            en: "Tamil Nadu offers beautiful destinations like Chennai's beaches, Madurai's temples, Ooty's hills, and Pondicherry's French heritage. Our Tamil Nadu packages start from ₹8,999.",
+            ta: "தமிழ்நாடு சென்னையின் கடற்கரைகள், மதுரையின் கோயில்கள், உதகமண்டலத்தின் மலைகள் மற்றும் பாண்டிச்சேரியின் பிரஞ்சு மரபு போன்ற அழகான இடங்களை வழங்குகிறது. எங்கள் தமிழ்நாடு தொகுப்புகள் ₹8,999 முதல் தொடங்குகின்றன.",
+            hi: "तमिलनाडु चेन्नई के समुद्र तटों, मदुरै के मंदिरों, ऊटी की पहाड़ियों और पांडिचेरी की फ्रांसीसी विरासत जैसे सुंदर स्थलों की पेशकश करता है। हमारे तमिलनाडु पैकेज ₹8,999 से शुरू होते हैं।"
+        },
+        'india': {
+            en: "Explore incredible India with packages to Goa's beaches, Kerala's backwaters, Rajasthan's palaces, and the Himalayan adventures starting from ₹12,499.",
+            ta: "கோவாவின் கடற்கரைகள், கேரளாவின் பின்னணி நீர், ராஜஸ்தானின் அரண்மனைகள் மற்றும் இமயமலையின் சாகசங்கள் ₹12,499 முதல் தொடங்கும் தொகுப்புகளுடன் அற்புதமான இந்தியாவை ஆராயுங்கள்.",
+            hi: "गोवा के समुद्र तटों, केरल के बैकवाटर, राजस्थान के महलों और हिमालय के रोमांच के लिए ₹12,499 से शुरू होने वाले पैकेजों के साथ अविश्वसनीय भारत की खोज करें।"
+        },
+        'international': {
+            en: "Our international packages include Bali's beaches, Switzerland's Alps, Japan's culture, and Dubai's modern marvels starting from ₹49,999.",
+            ta: "எங்கள் சர்வதேச தொகுப்புகளில் பாலியின் கடற்கரைகள், சுவிட்சர்லாந்தின் ஆல்ப்ஸ், ஜப்பானின் கலாச்சாரம் மற்றும் டுபாயின் நவீன அதிசயங்கள் ₹49,999 முதல் தொடங்குகின்றன.",
+            hi: "हमारे अंतरराष्ट्रीय पैकेजों में बाली के समुद्र तटों, स्विट्जरलैंड के आल्प्स, जापान की संस्कृति और दुबई के आधुनिक चमत्कार ₹49,999 से शुरू होते हैं।"
+        },
+        'couple': {
+            en: "Our romantic couple packages include private dinners, luxury resorts, and special experiences starting from ₹19,999.",
+            ta: "எங்கள் ரொமான்டிக் ஜோடி தொகுப்புகளில் தனிப்பட்ட இரவு உணவு, ஆடம்பர ரிசார்ட் மற்றும் சிறப்பு அனுபவங்கள் ₹19,999 முதல் தொடங்குகின்றன.",
+            hi: "हमारे रोमांटिक कपल पैकेजों में निजी डिनर, लक्जरी रिसॉर्ट और विशेष अनुभव ₹19,999 से शुरू होते हैं।"
+        },
+        'family': {
+            en: "Family packages include kid-friendly activities, spacious accommodations, and fun for all ages starting from ₹24,999.",
+            ta: "குடும்ப தொகுப்புகளில் குழந்தைகளுக்கு ஏற்ற செயல்பாடுகள், விசாலமான வசிப்பிடங்கள் மற்றும் அனைத்து வயதினருக்கும் வேடிக்கை ₹24,999 முதல் தொடங்குகின்றன.",
+            hi: "परिवार पैकेजों में बच्चों के अनुकूल गतिविधियाँ, विशाल आवास और सभी उम्र के लिए मज़ा ₹24,999 से शुरू होता है।"
+        },
+        'booking': {
+            en: "You can book directly through our website or I can assist you with the process. Would you like me to check availability for a specific package?",
+            ta: "எங்கள் வலைத்தளத்தின் மூலம் நேரடியாக பதிவு செய்யலாம் அல்லது நான் செயல்முறையில் உதவ முடியும். ஒரு குறிப்பிட்ட தொகுப்பிற்கான கிடைக்கும் தன்மையை சரிபார்க்க விரும்புகிறீர்களா?",
+            hi: "आप हमारी वेबसाइट के माध्यम से सीधे बुक कर सकते हैं या मैं आपको इस प्रक्रिया में सहायता कर सकता हूँ। क्या आप चाहेंगे कि मैं किसी विशेष पैकेज की उपलब्धता जांचूं?"
+        },
+        'default': {
+            en: "I'm not sure I understand. Could you rephrase that? I can help with package info, bookings, or travel advice.",
+            ta: "நான் புரிந்து கொள்ளவில்லை என்று நினைக்கிறேன். அதை மீண்டும் சொல்ல முடியுமா? நான் தொகுப்பு தகவல், முன்பதிவுகள் அல்லது பயண ஆலோசனையில் உதவ முடியும்.",
+            hi: "मुझे यकीन नहीं है कि मैं समझ पाया। क्या आप इसे दोबारा कह सकते हैं? मैं पैकेज जानकारी, बुकिंग या यात्रा सलाह में मदद कर सकता हूँ।"
+        }
+    };
+    
+    // Current language
+    let currentLanguage = 'en';
+    
+    // Toggle chatbot visibility
+    chatbotToggle.addEventListener('click', () => {
+        chatbotContainer.classList.toggle('active');
+        chatbotToggle.classList.toggle('active');
+    });
+    
+    chatbotClose.addEventListener('click', () => {
+        chatbotContainer.classList.remove('active');
+        chatbotToggle.classList.remove('active');
+    });
+    
+    // Tab switching
+    chatbotTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabName = tab.getAttribute('data-tab');
+            
+            // Update active tab
+            chatbotTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Show corresponding content
+            chatbotTabContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.getAttribute('data-tab-content') === tabName) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    });
+    
+    // Package category filtering
+    packageCategories.forEach(category => {
+        category.addEventListener('click', () => {
+            const categoryName = category.getAttribute('data-category');
+            
+            // Update active category
+            packageCategories.forEach(c => c.classList.remove('active'));
+            category.classList.add('active');
+            
+            // Filter packages
+            packageCards.forEach(card => {
+                const categories = card.getAttribute('data-categories').split(' ');
+                if (categoryName === 'all' || categories.includes(categoryName)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Send message function
+    function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (message === '') return;
+        
+        // Add user message
+        addMessage(message, 'user');
+        chatbotInput.value = '';
+        
+        // Simulate bot typing
+        setTimeout(() => {
+            const botResponse = generateBotResponse(message);
+            addMessage(botResponse, 'bot');
+        }, 1000);
+    }
+    
+    // Add message to chat
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chatbot-message ${sender}-message`;
+        
+        if (sender === 'bot') {
+            messageDiv.innerHTML = `
+                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Bot" class="chatbot-avatar">
+                <div class="message-content">
+                    <p>${text}</p>
+                </div>
+            `;
+        } else {
+            messageDiv.innerHTML = `
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User" class="chatbot-avatar">
+                <div class="message-content">
+                    <p>${text}</p>
+                </div>
+            `;
+        }
+        
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    
+    // Generate bot response based on language and query
+    function generateBotResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        if (lowerMessage.includes('hi') || lowerMessage.includes('hello') || lowerMessage.includes('hey')) {
+            return botResponses['greeting'][currentLanguage];
+        } else if (lowerMessage.includes('package') || lowerMessage.includes('tour') || lowerMessage.includes('trip')) {
+            return botResponses['packages'][currentLanguage];
+        } else if (lowerMessage.includes('tamil') || lowerMessage.includes('tamilnadu') || lowerMessage.includes('chennai') || lowerMessage.includes('madurai')) {
+            return botResponses['tamilnadu'][currentLanguage];
+        } else if (lowerMessage.includes('india') || lowerMessage.includes('indian') || lowerMessage.includes('goa') || lowerMessage.includes('kerala')) {
+            return botResponses['india'][currentLanguage];
+        } else if (lowerMessage.includes('international') || lowerMessage.includes('abroad') || lowerMessage.includes('foreign') || lowerMessage.includes('dubai') || lowerMessage.includes('bali')) {
+            return botResponses['international'][currentLanguage];
+        } else if (lowerMessage.includes('couple') || lowerMessage.includes('romantic') || lowerMessage.includes('honeymoon')) {
+            return botResponses['couple'][currentLanguage];
+        } else if (lowerMessage.includes('family') || lowerMessage.includes('kids') || lowerMessage.includes('children')) {
+            return botResponses['family'][currentLanguage];
+        } else if (lowerMessage.includes('book') || lowerMessage.includes('reserve') || lowerMessage.includes('buy')) {
+            return botResponses['booking'][currentLanguage];
+        } else {
+            return botResponses['default'][currentLanguage];
+        }
+    }
+    
+    // Event listeners for chat
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+    
+    // Quick question buttons
+    document.querySelectorAll('.quick-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const question = button.textContent;
+            addMessage(question, 'user');
+            
+            setTimeout(() => {
+                const botResponse = generateBotResponse(question);
+                addMessage(botResponse, 'bot');
+            }, 1000);
+        });
+    });
+    
+    // Language change handler
+    const languageSelect = document.getElementById('chatbotLanguage');
+    languageSelect.addEventListener('change', (e) => {
+        currentLanguage = e.target.value;
+        // In a real app, you would update all translatable content here
+        console.log(`Language changed to ${currentLanguage}`);
+    });
+    
+    // Voice recognition
+    if ('webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        
+        chatbotMic.addEventListener('click', () => {
+            recognition.start();
+            chatbotMic.innerHTML = '<i class="fas fa-microphone-slash"></i>';
+        });
+        
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            chatbotInput.value = transcript;
+            chatbotMic.innerHTML = '<i class="fas fa-microphone"></i>';
+            sendMessage();
+        };
+        
+        recognition.onerror = () => {
+            chatbotMic.innerHTML = '<i class="fas fa-microphone"></i>';
+        };
+        
+        recognition.onend = () => {
+            chatbotMic.innerHTML = '<i class="fas fa-microphone"></i>';
+        };
+    } else {
+        chatbotMic.style.display = 'none';
+    }
+    
+    // Sample function to simulate package viewing
+    document.querySelectorAll('.package-view').forEach(button => {
+        button.addEventListener('click', () => {
+            // Switch to chat tab
+            document.querySelector('.chatbot-tab[data-tab="chat"]').click();
+            
+            // Simulate asking about the package
+            const packageName = button.closest('.package-card').querySelector('h4').textContent;
+            addMessage(`Tell me more about ${packageName}`, 'user');
+            
+            setTimeout(() => {
+                addMessage(`The ${packageName} is one of our most popular packages! It includes... [more details would go here]`, 'bot');
+            }, 1500);
+        });
+    });
+    
+    // Sample function to simulate deal booking
+    document.querySelectorAll('.deal-book').forEach(button => {
+        button.addEventListener('click', () => {
+            // Switch to chat tab
+            document.querySelector('.chatbot-tab[data-tab="chat"]').click();
+            
+            // Simulate asking about booking
+            const dealName = button.closest('.deal-card').querySelector('h4').textContent;
+            addMessage(`I want to book the ${dealName}`, 'user');
+            
+            setTimeout(() => {
+                addMessage(`Great choice! The ${dealName} is available. Let me check the dates for you...`, 'bot');
+            }, 1500);
+        });
+    });
+});
+</script>
